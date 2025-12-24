@@ -71,3 +71,7 @@ button{
     border-radius: 1rem;
     padding-left: 1rem;
 }
+select{
+    
+    cursor:pointer;
+}
