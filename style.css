@@ -30,7 +30,7 @@ input, select, button{
     border:1px solid lightgray;
     font-size:1rem;
 }
-
+ 
 .ITEM{
     display:flex;
     align-items:center;
@@ -47,9 +47,8 @@ input, select, button{
     border-radius:0.75rem;
     width:45%;
 }
-
 .select-box img{
-    width:30px;
+    width:40px;
 }
 
 .ITEM i{
