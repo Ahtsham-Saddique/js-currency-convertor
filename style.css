@@ -31,7 +31,7 @@ input, select, button{
     font-size:1rem;
 }
  
-.ITEM{
+.dropdown{
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -51,7 +51,7 @@ input, select, button{
     width:40px;
 }
 
-.ITEM i{
+.dropdown i{
     font-size:1.2rem;
 }
 
