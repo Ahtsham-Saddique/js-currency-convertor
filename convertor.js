@@ -56,6 +56,7 @@ form.addEventListener("submit", async (e) => {
     convertCurrency();
 });
 
-
+window.addEventListener("load", () => {
+    amountInput.value = 1; 
     convertCurrency();
-
+});
