@@ -30,3 +30,32 @@ const updateFlag = (element) => {
     let img = element.parentElement.querySelector("img");
     img.src = `https://flagsapi.com/${countrycode}/shiny/64.png`;
 };
+
+const convertCurrency = async () => {
+    let amount = amountInput.value || 1; // default 1 if empty
+    const fromCurrency = document.querySelector("select[name='from']").value;
+    const toCurrency = document.querySelector("select[name='to']").value;
+
+    const URL = `https://open.er-api.com/v6/latest/${fromCurrency}`;
+
+    try {
+        const response = await fetch(URL);
+        const data = await response.json();
+        const rate = data.rates[toCurrency];
+        const convertedAmount = (amount * rate).toFixed(2);
+        msg.innerText = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+    } catch (error) {
+        msg.innerText = "Error fetching exchange rate";
+        console.error(error);
+    }
+};
+
+// Submit form
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    convertCurrency();
+});
+
+
+    convertCurrency();
+
